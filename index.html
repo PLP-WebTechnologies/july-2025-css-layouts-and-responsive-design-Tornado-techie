@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Reduction Strategies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌱 Food Waste Reduction</h1>
+        <p>Small Actions, Big Impact</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#consumer">Consumer Tips</a></li>
+            <li><a href="#industrial">Industrial Solutions</a></li>
+            <li><a href="#waste-energy">Waste-to-Energy</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section id="consumer">
+                <h2>Consumer-Level Tips</h2>
+                <p>Plan meals, store food correctly, and compost to reduce household waste.</p>
+            </section>
+
+            <section id="industrial">
+                <h2>Industrial By-Product Utilization</h2>
+                <p>Convert peels and pulp into animal feed, thickeners, or bio-packaging.</p>
+            </section>
+
+            <section id="waste-energy">
+                <h2>Waste-to-Energy Solutions</h2>
+                <p>Food waste can be transformed into biogas or organic fertilizer, supporting clean energy initiatives.</p>
+            </section>
+
+            <section class="card-section">
+                <div class="card">🍎 Reduce Food Waste at Source</div>
+                <div class="card">♻️ Repurpose Industrial By-products</div>
+                <div class="card">⚡ Convert Waste to Energy</div>
+                <div class="card">🍽️ Donate Surplus Food to Charities</div> <!-- NEW CARD -->
+            </section>
+
+            <section id="calculator">
+                <h2>🌍 CO2 Savings Calculator</h2>
+                <form id="co2-form">
+                    <label for="waste-amount">Reduced food waste (kg):</label>
+                    <input type="number" id="waste-amount" min="0" required>
+                    <button type="submit">Calculate</button>
+                </form>
+                <div id="result"></div>
+            </section>
+        </main>
+
+        <aside>
+            <h3>Why Reduce Food Waste?</h3>
+            <ul>
+                <li>Conserves water and energy resources.</li>
+                <li>Reduces greenhouse gas emissions.</li>
+                <li>Minimizes landfill usage and pollution.</li>
+                <li>Supports global food security.</li>
+                <li>Saves money at household and industrial levels.</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sustainable Food Initiative by Salome Mundia</p>
+    </footer>
+
+    <script>
+        document.getElementById('co2-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const wasteAmount = parseFloat(document.getElementById('waste-amount').value);
+            const co2Saved = (wasteAmount * 2.5).toFixed(2);
+            document.getElementById('result').textContent = `You saved approximately ${co2Saved} kg of CO2 emissions! 🌍`;
+        });
+    </script>
+
+</body>
+</html>
